@@ -4,50 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>Perguntas</title>
 </head>
 
 <body>
-  <h3>home</h3>
-  <h3>
-    <%= nome %>
-  </h3>
-  <h3>
-    <%= idade %>
-  </h3>
-
-  <h1>
-    <% if(erroMsg){%>
-      <h4>erro ao execultar</h4>
-      <%} else{ %>
-        <h4>aplicação rodadando!</h4>
-        <%}%>
-
-  </h1>
-
-
-  <% produtos.forEach(function(produto){ %>
-    <table border="">
-      <thead>
-        <tr>
-          <td>nome </td>
-          <td>preco </td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <%=produto.nome%>
-          </td>
-          <td>
-            <%=produto.preco%>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <%})%>
-
-      <!-- pegando referencia de variaveis criadas no js-->
+  <div class="container-fluid border-1 bg-dark">
+    <h3 class="text-light">lauricio</h3>
+  </div>
 </body>
+<footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz"
+    crossorigin="anonymous"></script>
+  <script src="/js/bootstrap.min.js"></script>
+</footer>
 
 </html>

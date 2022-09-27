@@ -1,0 +1,19 @@
+{
+  "name": "perguntas-e-respostas",
+  "version": "1.0.0",
+  "description": "projeto perguntas e respostas ao estilo yahoo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LauricioX/perguntas-e-respostas.git"
+  },
+  "author": "lauricio de souza",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LauricioX/perguntas-e-respostas/issues"
+  },
+  "homepage": "https://github.com/LauricioX/perguntas-e-respostas#readme"
+}

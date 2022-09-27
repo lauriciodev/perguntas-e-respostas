@@ -4,9 +4,17 @@ const app = express();
 //setando ejs com engine express
 app.set("view engine","ejs");
 
-app.get("/",(req,res) =>{
+app.get("/:nome/:idade",(req,res) =>{
+  let nome = req.params.nome
+  let idade = req.params.idade
+  //como visto acima podemos resceber os parametros direto da url e passar para o nosso objeto
+
+  //essas variaveis podem ser criadas diretamente fora ou dentro do objeto!
+
+  
 res.render("index",{
-  nome:"lauricio"
+  nome:nome,
+  idade:idade
 });
 });
 

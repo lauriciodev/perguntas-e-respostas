@@ -15,7 +15,39 @@
   <h3>
     <%= idade %>
   </h3>
-  <!-- pegando referencia de variaveis criadas no js-->
+
+  <h1>
+    <% if(erroMsg){%>
+      <h4>erro ao execultar</h4>
+      <%} else{ %>
+        <h4>aplicação rodadando!</h4>
+        <%}%>
+
+  </h1>
+
+
+  <% produtos.forEach(function(produto){ %>
+    <table border="">
+      <thead>
+        <tr>
+          <td>nome </td>
+          <td>preco </td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <%=produto.nome%>
+          </td>
+          <td>
+            <%=produto.preco%>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <%})%>
+
+      <!-- pegando referencia de variaveis criadas no js-->
 </body>
 
 </html>

@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/LauricioX/perguntas-e-respostas/issues"
   },
-  "homepage": "https://github.com/LauricioX/perguntas-e-respostas#readme"
+  "homepage": "https://github.com/LauricioX/perguntas-e-respostas#readme",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
+  }
 }

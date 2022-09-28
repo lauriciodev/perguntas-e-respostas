@@ -14,5 +14,10 @@ app.get("/perguntar", (req,res) =>{
   res.render("perguntar")
 })
 
+
+app.post("/salvar",(req,res) =>{
+  res.send("fromulario recebido!")
+})
+
 app.listen(8080,(erro) => erro ? console.log("erro"):console.log("servidor ok"));
 

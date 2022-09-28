@@ -1,6 +1,19 @@
 const express = require("express");
 const app = express();
 const bodyParse = require("body-parser");
+const connection = require("./databases/database");
+
+
+//databases
+
+connection
+.authenticate()
+.then(() =>{
+  console.log("conexão feita com o banco de dados")
+})
+.catch((erro) =>{
+  console.log(erro);
+})
 
 
 //setando body-parser

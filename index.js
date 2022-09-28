@@ -10,5 +10,9 @@ res.render("index")
 })
 
 
+app.get("/perguntar", (req,res) =>{
+  res.render("perguntar")
+})
+
 app.listen(8080,(erro) => erro ? console.log("erro"):console.log("servidor ok"));
 

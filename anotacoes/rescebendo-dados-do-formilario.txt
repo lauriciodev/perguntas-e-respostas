@@ -1,0 +1,8 @@
+
+app.post("/salvar",(req,res) =>{
+  let titulo = req.body.titulo;
+  let descricao = req.body.descricao;
+
+
+  res.send("<h1> titulo: " + titulo + " descricao " + descricao + " </h1>"  )
+})

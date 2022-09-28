@@ -1,5 +1,10 @@
 const express = require("express");
 const app = express();
+const bodyParse = require("body-parser");
+
+
+//setando body-parser
+app.use(bodyParse.urlencoded({extended:false}));
 
 //setando ejs com engine express
 app.set("view engine","ejs");
@@ -16,7 +21,11 @@ app.get("/perguntar", (req,res) =>{
 
 
 app.post("/salvar",(req,res) =>{
-  res.send("fromulario recebido!")
+  let titulo = req.body.titulo;
+  let descricao = req.body.descricao;
+
+
+  res.send("<h1> titulo: " + titulo + " descricao " + descricao + " </h1>"  )
 })
 
 app.listen(8080,(erro) => erro ? console.log("erro"):console.log("servidor ok"));

@@ -11,6 +11,15 @@
         <p>
           <%= pergunta.descricao %>
         </p>
+        <hr>
+
+
+        <form method="post" action="/responder">
+          <h3>Responda</h3>
+          <textarea placeholder="Digite sua resposta" class=" form-control" name="corpo"></textarea>
+          <input type="hidden" name="pergunta" value="<%= pergunta.id %>">
+          <button class="btn btn-success mt-3">Responder</button>
+        </form>
       </div>
   </body>
   <%- include ('partials/footer.ejs') %>

@@ -3,7 +3,7 @@ const app = express();
 const bodyParse = require("body-parser");
 const connection = require("./databases/database");
 const perguntaModel = require("./databases/Pergunta");
-
+const Resposta = require("./databases/Resposta");
 
 //databases
 connection
@@ -72,6 +72,25 @@ app.get("/pergunta/:id",(req,res)=>{
     }
    })
 })
+
+
+
+app.post("/responder",(req,res) =>{
+  let corpo = req.body.corpo
+  let pergunta = req.body.pergunta
+
+Resposta.create({
+  corpo:corpo,
+  perguntaId:pergunta
+}).then(() =>{
+  res.redirect("/pergunta/"+ pergunta)
+})
+
+
+
+
+})
+
 
 app.listen(8080,(erro) => erro ? console.log("erro"):console.log("servidor ok"));
 

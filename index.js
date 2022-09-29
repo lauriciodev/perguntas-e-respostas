@@ -65,10 +65,10 @@ app.get("/pergunta/:id",(req,res)=>{
    }).then(pergunta => {
     if(pergunta != undefined){
       res.render("pergunta",{
-        id:id
+       pergunta:pergunta
       });
     }else{
-      res.redirect("/")
+      res.redirect("/");
     }
    })
 })

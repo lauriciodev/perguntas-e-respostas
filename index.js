@@ -2,6 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParse = require("body-parser");
 const connection = require("./databases/database");
+const perguntaModel = require("./databases/Pergunta");
 
 
 //databases
@@ -24,8 +25,15 @@ app.set("view engine","ejs");
 app.use(express.static("public"))
 
 app.get("/",(req,res) =>{
-res.render("index")
-})
+
+perguntaModel.findAll({raw: true}).then( perguntas =>{
+  res.render("index",{
+    perguntas:perguntas
+  });
+});
+
+
+});
 
 
 app.get("/perguntar", (req,res) =>{
@@ -37,8 +45,14 @@ app.post("/salvar",(req,res) =>{
   let titulo = req.body.titulo;
   let descricao = req.body.descricao;
 
+  perguntaModel.create({
+    titulo: titulo,
+    descricao:descricao
+  }).then(() =>{
+    res.redirect("/");
+  })
 
-  res.send("<h1> titulo: " + titulo + " descricao " + descricao + " </h1>"  )
+   
 })
 
 app.listen(8080,(erro) => erro ? console.log("erro"):console.log("servidor ok"));

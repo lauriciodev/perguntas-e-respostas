@@ -3,9 +3,28 @@
   <body>
     <%- include ('partials/navbar.ejs') %>
 
-      <h1>pagina inicial</h1>
+      <div class="container pt-2">
+        <hr>
+        <h2 class="text-white">Perguntas</h2>
+        <a href="/perguntar" class="btn btn-success">Perguntar</a>
+        <hr>
+        <% perguntas.forEach(pergunta=> { %>
 
+          <div class="card">
+            <div class="card-body">
+              <h3>
+                <%= pergunta.titulo %>
+              </h3>
+            </div>
 
+            <div class="card-footer">
+              <button class="btn btn-success">responder</button>
+            </div>
+          </div>
+          <p>
+          </p>
+          <% })%>
+      </div>
   </body>
   <%- include ('partials/footer.ejs') %>
 

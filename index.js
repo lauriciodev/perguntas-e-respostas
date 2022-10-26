@@ -80,8 +80,6 @@ app.get("/pergunta/:id",(req,res)=>{
    })
 })
 
-
-
 app.post("/responder",(req,res) =>{
   let corpo = req.body.corpo
   let pergunta = req.body.pergunta
